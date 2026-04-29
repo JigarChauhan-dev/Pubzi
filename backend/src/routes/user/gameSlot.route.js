@@ -5,3 +5,4 @@ let router = express.Router();
 router.get("/:id", fetchGameSlotById);
 
 module.exports = router;
+
