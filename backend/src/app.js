@@ -30,7 +30,7 @@ let Adminroute = require("./routes/admin/admin.route");
 // user
 let Profileroute = require("./routes/user/profile.route");
 let UserGameroute = require("./routes/user/game.route");
-let UserslotRoute = require("./routes/user/gameSlot.route");
+let UserslotRoute = require("./routes/user/gameslot.route");
 let UserseatRoute = require("./routes/user/seat.route");
 let razorpay = require("./routes/user/razorpay.route");
 let Booking = require("./routes/user/book.route");
