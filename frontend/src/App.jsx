@@ -14,8 +14,8 @@ import GameDetails from "./Pages/GameDetails";
 import BookingHistory from "./Pages/BookingHistory";
 import Feedback from "./Pages/Feedback";
 import ForgotPassword from "./Pages/ForgotPassword";
-import ResetPassword from "./Pages/resetPassword";
 import ProtectPage from "./utils/ProtectPage";
+import ResetPassword from "./Pages/resetPassword";
 
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
           <Route path="/bookinghistory" element={<ProtectPage> <BookingHistory/> </ProtectPage>}/>
           <Route path="/feedback" element={<ProtectPage> <Feedback/> </ProtectPage> }/>
           <Route path="/forgotpassword" element={<ForgotPassword/>}/>
-          <Route path="/reset-password/:token" element={<ResetPassword/>}/>
+          <Route path="/reset-password/:token" element={<ResetPassword/>} />
 
         </Routes>
       </BrowserRouter>
