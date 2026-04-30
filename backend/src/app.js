@@ -1,4 +1,4 @@
-let cors = require("cors");
+import cors from "cors";
 let express = require("express");
 let app = express();
 import cookieParser from "cookie-parser";
