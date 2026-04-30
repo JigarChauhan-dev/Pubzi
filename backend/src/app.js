@@ -1,6 +1,7 @@
 let cors = require("cors");
 let express = require("express");
 let app = express();
+import cookieParser from "cookie-parser";
 
 app.use(
   cors({
@@ -10,6 +11,7 @@ app.use(
   })
 );
 
+app.use(cookieParser());
 app.use(express.json())
 
 // common
