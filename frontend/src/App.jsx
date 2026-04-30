@@ -15,7 +15,7 @@ import BookingHistory from "./Pages/BookingHistory";
 import Feedback from "./Pages/Feedback";
 import ForgotPassword from "./Pages/ForgotPassword";
 import ProtectPage from "./utils/ProtectPage";
-import ResetPassword from "./Pages/resetPassword";
+import ResetPassword from "./Pages/ResetPassword";
 
 
 function App() {
