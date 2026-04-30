@@ -22,7 +22,7 @@ function Login() {
 
   let login = async (user) => {
     let response = await axios.post(
-      "http://localhost:8000/api/auth/login",
+      `${import.meta.env.VITE_API_URL}/auth/login`,
       user,
     );
     return response.data;
