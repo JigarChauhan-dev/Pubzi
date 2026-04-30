@@ -4,7 +4,7 @@ let app = express();
 
 app.use(
   cors({
-    origin: ["https://pubzi.onrender.com","https://pubzi-rql0.onrender.com","http://localhost:5173"],
+    origin: ["https://admin-pubzi.onrender.com","https://pubzi-rql0.onrender.com","http://localhost:5173"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
