@@ -36,6 +36,11 @@ function Header() {
                     </button>
                   </div>
                 </div>
+                
+                <p className="text d-none d-xl-block">
+                  Built for gamers who demand speed, stability, and a smooth
+                  experience every time.
+                </p>
                 <div className="header-right-icon">
                   {token ? (
                     <>
@@ -75,16 +80,8 @@ function Header() {
                       </div>
                     </>
                   )}
-                  <div className="header__hamburger d-xl-none d-xl-block my-auto">
-                    <div className="sidebar__toggle">
-                      <img src="assets/img/logo/dot-ber.svg" alt />
-                    </div>
-                  </div>
+                  
                 </div>
-                <p className="text d-none d-xl-block">
-                  Built for gamers who demand speed, stability, and a smooth
-                  experience every time.
-                </p>
                 <div className="mobile-menu fix mb-3" />
                 <div className="sideber-image">
                   <img src="assets/img/header/sideber.jpg" alt="img" />
