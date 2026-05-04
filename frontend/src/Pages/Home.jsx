@@ -18,16 +18,17 @@ function Home() {
     },
   });
   const navigate = useNavigate();
-  const { data } = {
+  const {
+    data: gamesData, // Renamed for clarity
+    isLoading: isGamesLoading,
+  } = useQuery({
     queryKey: ["game"],
     queryFn: async () => {
       const response = await api.get("/user/game/allgame");
-
       console.log(response.data);
-
       return response.data.data;
     },
-  };
+  });
   return (
     <>
       <div>
@@ -227,25 +228,33 @@ function Home() {
               <section className="section-padding fix">
                 <Container>
                   <Row>
-                    {data?.slice(0, 3).map((game) => (
-                      <Col lg={4} md={6} key={game._id} className="mb-4">
-                        <Card className="bg-dark text-white border-0 h-100 shadow">
-                          <Card.Img variant="top" src={`${api.defaults.baseURL}/uploads/game/${game.image}`} />
-
-                          <Card.Body className="text-center d-flex flex-column">
-                            <Card.Title>{game.name}</Card.Title>
-
-                            <Button
-                              variant="outline-warning"
-                              className="mt-auto fw-semibold"
-                              onClick={() => navigate(`/game`)}
-                            >
-                              View All Games
-                            </Button>
-                          </Card.Body>
-                        </Card>
-                      </Col>
-                    ))}
+                    {isGamesLoading ? (
+                      <div className="text-center text-white w-100">
+                        Loading Games...
+                      </div>
+                    ) : (
+                      gamesData?.slice(0, 3).map((game) => (
+                        <Col lg={4} md={6} key={game._id} className="mb-4">
+                          <Card className="bg-dark text-white border-0 h-100 shadow">
+                            {/* Ensure the fallback for images works */}
+                            <Card.Img
+                              variant="top"
+                              src={`${api.defaults.baseURL}/uploads/game/${game.image}`}
+                            />
+                            <Card.Body className="text-center d-flex flex-column">
+                              <Card.Title>{game.name}</Card.Title>
+                              <Button
+                                variant="outline-warning"
+                                className="mt-auto fw-semibold"
+                                onClick={() => navigate(`/game`)}
+                              >
+                                View All Games
+                              </Button>
+                            </Card.Body>
+                          </Card>
+                        </Col>
+                      ))
+                    )}
                   </Row>
                 </Container>
               </section>
