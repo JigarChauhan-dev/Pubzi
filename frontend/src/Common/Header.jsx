@@ -162,6 +162,7 @@ function Header() {
                 <div className="header-right-icon">
                   {token ? (
                     <>
+                    <div className="header-right-icon d-flex align-items-center gap-2 flex-wrap">
                       <div className="header-button">
                         <button
                           onClick={() => {
@@ -180,9 +181,11 @@ function Header() {
                           <span className="fa fa-user"></span>
                         </Link>
                       </div>
+                      </div>
                     </>
                   ) : (
                     <>
+                    <div className="header-right-icon d-flex align-items-center gap-2 flex-wrap">
                       <div className="header-button">
                         <Link to={"/login"} className="theme-btn style-2">
                           <span className="left-line" />
@@ -196,9 +199,10 @@ function Header() {
                           Signup
                         </Link>
                       </div>
+                      </div>
                     </>
                   )}
-                  <div className="header__hamburger d-xl-none my-auto">
+                  <div className="header__hamburger d-xl-none d-xl-block my-auto">
                     <div className="sidebar__toggle">
                       <img src="assets/img/logo/dot-ber.svg" alt />
                     </div>
