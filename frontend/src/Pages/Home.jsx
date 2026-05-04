@@ -18,7 +18,7 @@ function Home() {
     },
   });
   const navigate = useNavigate();
-  const { data } = ({
+  const { data } = {
     queryKey: ["game"],
     queryFn: async () => {
       const response = await api.get("/user/game/allgame");
@@ -27,7 +27,7 @@ function Home() {
 
       return response.data.data;
     },
-  });
+  };
   return (
     <>
       <div>
@@ -228,9 +228,9 @@ function Home() {
                 <Container>
                   <Row>
                     {data?.slice(0, 3).map((game) => (
-                      <Col lg={4} md={6} key={game.id} className="mb-4">
+                      <Col lg={4} md={6} key={game._id} className="mb-4">
                         <Card className="bg-dark text-white border-0 h-100 shadow">
-                          <Card.Img variant="top" src={game.image} />
+                          <Card.Img variant="top" src={`${api.defaults.baseURL}/uploads/game/${game.image}`} />
 
                           <Card.Body className="text-center d-flex flex-column">
                             <Card.Title>{game.name}</Card.Title>
@@ -1496,7 +1496,7 @@ function Home() {
                         </div>
                       </div>
                     </div>
-                    <div className="col-xl-6">  
+                    <div className="col-xl-6">
                       <div className="news-right-items">
                         <div className="section-title mb-0">
                           <h6 className="subtitle tz-sub-tilte tz-sub-anim  text-uppercase tx-subTitle">
@@ -1567,9 +1567,7 @@ function Home() {
                         id="email"
                         placeholder="enter your email"
                       />
-                      <button  className="theme-btn">
-                        subscribe now
-                      </button>
+                      <button className="theme-btn">subscribe now</button>
                     </div>
                   </form>
                 </div>
