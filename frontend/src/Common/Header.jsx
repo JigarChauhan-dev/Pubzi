@@ -42,7 +42,7 @@ function Header() {
                   experience every time.
                 </p>
                 <div className="mobile-menu fix mb-3" />
-
+                
                 <div className="sideber-image">
 
                   <img src="assets/img/header/sideber.jpg" alt="img" />
@@ -183,14 +183,14 @@ function Header() {
                     </>
                   ) : (
                     <>
-                      <div className="header-button d-block">
+                      <div className="header-button">
                         <Link to={"/login"} className="theme-btn style-2">
                           <span className="left-line" />
                           Login
                         </Link>
                       </div>
 
-                      <div className="header-button d-block">
+                      <div className="header-button">
                         <Link to={"/signup"} className="theme-btn style-2">
                           <span className="left-line" />
                           Signup
@@ -198,7 +198,7 @@ function Header() {
                       </div>
                     </>
                   )}
-                  <div className="header__hamburger d-xl-none d-xl-block my-auto">
+                  <div className="header__hamburger d-xl-none my-auto">
                     <div className="sidebar__toggle">
                       <img src="assets/img/logo/dot-ber.svg" alt />
                     </div>
