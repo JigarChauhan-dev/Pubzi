@@ -129,55 +129,79 @@ function Header() {
                   </a>
                 </div>
               </div>
-              <div className="header-right d-flex justify-content-between align-items-center w-100">
-                {/* Menu */}
-                <div className="mean__menu-wrapper flex-grow-1">
+              <div className="header-right d-flex justify-content-end align-items-center mt-0">
+                <div className="mean__menu-wrapper">
                   <div className="main-menu">
                     <nav id="mobile-menu">
-                      <ul className="d-flex flex-wrap gap-3 mb-0">
-                        <li>
-                          <Link to="/">Home</Link>
+                      <ul>
+                        <li className="has-dropdown active menu-thumb">
+                          <Link to={"/"}>Home</Link>
+                        </li>
+                        <li className="has-dropdown active d-xl-none">
+                          <Link to={"/"} className="border-none">
+                            Home
+                          </Link>
                         </li>
                         <li>
-                          <Link to="/about">About Us</Link>
+                          <Link to={"/about"}>About Us</Link>
+                        </li>
+                        <li className="has-dropdown">
+                          <Link to={"/game"}>Game</Link>
                         </li>
                         <li>
-                          <Link to="/game">Game</Link>
+                          <Link to={"/bookinghistory"}>bookinghistory</Link>
                         </li>
                         <li>
-                          <Link to="/bookinghistory">Booking</Link>
-                        </li>
-                        <li>
-                          <Link to="/contact">Contact</Link>
+                          <Link to={"/contact"}>Contact Us</Link>
                         </li>
                       </ul>
                     </nav>
                   </div>
                 </div>
-
-                {/* Buttons */}
-                <div className="header-right-icon d-flex align-items-center gap-2 flex-wrap ms-3">
+                <div className="header-right-icon">
                   {token ? (
                     <>
-                      <button onClick={Logout} className="theme-btn style-2">
-                        Logout
-                      </button>
+                      <div className="header-button">
+                        <button
+                          onClick={() => {
+                            Logout();
+                          }}
+                          className="theme-btn style-2"
+                        >
+                          <span className="left-line" />
+                          Logout
+                        </button>
+                      </div>
 
-                      <Link to="/profile" className="theme-btn style-2">
-                        <span className="fa fa-user"></span>
-                      </Link>
+                      <div className="header-button">
+                        <Link to={"/profile"} className="theme-btn style-2">
+                          <span className="left-line" />
+                          <span className="fa fa-user"></span>
+                        </Link>
+                      </div>
                     </>
                   ) : (
                     <>
-                      <Link to="/login" className="theme-btn style-2">
-                        Login
-                      </Link>
+                      <div className="header-button">
+                        <Link to={"/login"} className="theme-btn style-2">
+                          <span className="left-line" />
+                          Login
+                        </Link>
+                      </div>
 
-                      <Link to="/signup" className="theme-btn style-2">
-                        Signup
-                      </Link>
+                      <div className="header-button">
+                        <Link to={"/signup"} className="theme-btn style-2">
+                          <span className="left-line" />
+                          Signup
+                        </Link>
+                      </div>
                     </>
                   )}
+                  <div className="header__hamburger d-xl-none my-auto">
+                    <div className="sidebar__toggle">
+                      <img src="assets/img/logo/dot-ber.svg" alt />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
