@@ -23,12 +23,12 @@ function Header() {
               <div className="offcanvas__content">
                 <div className="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                   <div className="offcanvas__logo">
-                    <a href="index.html">
+                    <Link to={"/"}>
                       <img
                         src="assets/img/logo/black-logo.svg"
                         alt="logo-img"
                       />
-                    </a>
+                    </Link>
                   </div>
                   <div className="offcanvas__close">
                     <button>
@@ -42,7 +42,9 @@ function Header() {
                   experience every time.
                 </p>
                 <div className="mobile-menu fix mb-3" />
+
                 <div className="sideber-image">
+
                   <img src="assets/img/header/sideber.jpg" alt="img" />
                 </div>
                 <div className="offcanvas__contact">
@@ -181,14 +183,14 @@ function Header() {
                     </>
                   ) : (
                     <>
-                      <div className="header-button">
+                      <div className="header-button d-block">
                         <Link to={"/login"} className="theme-btn style-2">
                           <span className="left-line" />
                           Login
                         </Link>
                       </div>
 
-                      <div className="header-button">
+                      <div className="header-button d-block">
                         <Link to={"/signup"} className="theme-btn style-2">
                           <span className="left-line" />
                           Signup
