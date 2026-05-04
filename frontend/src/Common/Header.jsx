@@ -36,52 +36,11 @@ function Header() {
                     </button>
                   </div>
                 </div>
-                
+
                 <p className="text d-none d-xl-block">
                   Built for gamers who demand speed, stability, and a smooth
                   experience every time.
                 </p>
-                <div className="header-right-icon">
-                  {token ? (
-                    <>
-                      <div className="header-button">
-                        <button
-                          onClick={() => {
-                            Logout();
-                          }}
-                          className="theme-btn style-2"
-                        >
-                          <span className="left-line" />
-                          Logout
-                        </button>
-                      </div>
-
-                      <div className="header-button">
-                        <Link to={"/profile"} className="theme-btn style-2">
-                          <span className="left-line" />
-                          <span className="fa fa-user"></span>
-                        </Link>
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      <div className="header-button">
-                        <Link to={"/login"} className="theme-btn style-2">
-                          <span className="left-line" />
-                          Login
-                        </Link>
-                      </div>
-
-                      <div className="header-button">
-                        <Link to={"/signup"} className="theme-btn style-2">
-                          <span className="left-line" />
-                          Signup
-                        </Link>
-                      </div>
-                    </>
-                  )}
-                  
-                </div>
                 <div className="mobile-menu fix mb-3" />
                 <div className="sideber-image">
                   <img src="assets/img/header/sideber.jpg" alt="img" />
@@ -148,6 +107,46 @@ function Header() {
           </div>
         </div>
         <div className="offcanvas__overlay" />
+        <div className="header-right-icon">
+          {token ? (
+            <>
+              <div className="header-button">
+                <button
+                  onClick={() => {
+                    Logout();
+                  }}
+                  className="theme-btn style-2"
+                >
+                  <span className="left-line" />
+                  Logout
+                </button>
+              </div>
+
+              <div className="header-button">
+                <Link to={"/profile"} className="theme-btn style-2">
+                  <span className="left-line" />
+                  <span className="fa fa-user"></span>
+                </Link>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="header-button">
+                <Link to={"/login"} className="theme-btn style-2">
+                  <span className="left-line" />
+                  Login
+                </Link>
+              </div>
+
+              <div className="header-button">
+                <Link to={"/signup"} className="theme-btn style-2">
+                  <span className="left-line" />
+                  Signup
+                </Link>
+              </div>
+            </>
+          )}
+        </div>
       </div>
 
       <header id="header-sticky" className="header-2">
