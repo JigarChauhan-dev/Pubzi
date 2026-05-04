@@ -36,6 +36,51 @@ function Header() {
                     </button>
                   </div>
                 </div>
+                <div className="header-right-icon">
+                  {token ? (
+                    <>
+                      <div className="header-button">
+                        <button
+                          onClick={() => {
+                            Logout();
+                          }}
+                          className="theme-btn style-2"
+                        >
+                          <span className="left-line" />
+                          Logout
+                        </button>
+                      </div>
+
+                      <div className="header-button">
+                        <Link to={"/profile"} className="theme-btn style-2">
+                          <span className="left-line" />
+                          <span className="fa fa-user"></span>
+                        </Link>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="header-button">
+                        <Link to={"/login"} className="theme-btn style-2">
+                          <span className="left-line" />
+                          Login
+                        </Link>
+                      </div>
+
+                      <div className="header-button">
+                        <Link to={"/signup"} className="theme-btn style-2">
+                          <span className="left-line" />
+                          Signup
+                        </Link>
+                      </div>
+                    </>
+                  )}
+                  <div className="header__hamburger d-xl-none d-xl-block my-auto">
+                    <div className="sidebar__toggle">
+                      <img src="assets/img/logo/dot-ber.svg" alt />
+                    </div>
+                  </div>
+                </div>
                 <p className="text d-none d-xl-block">
                   Built for gamers who demand speed, stability, and a smooth
                   experience every time.
