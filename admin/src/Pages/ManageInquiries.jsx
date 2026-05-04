@@ -34,10 +34,7 @@ function ManageInquiries() {
   });
 
   return (
-    <div className="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6"
-        data-sidebartype="full"
-        data-sidebar-position="fixed"
-        data-header-position="fixed">
+    <div className="page-wrapper" id="main-wrapper" data-layout="vertical" >
       <Aside />
 
       <div className="body-wrapper">
