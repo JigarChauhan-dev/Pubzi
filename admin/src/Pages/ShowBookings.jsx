@@ -20,7 +20,10 @@ function ShowBookings() {
   });
 
   return (
-    <div className="page-wrapper" id="main-wrapper" data-layout="vertical">
+    <div className="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6"
+        data-sidebartype="full"
+        data-sidebar-position="fixed"
+        data-header-position="fixed">
       <Aside />
 
       <div className="body-wrapper">
